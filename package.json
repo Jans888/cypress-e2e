@@ -19,16 +19,8 @@
     "mocha:test": "npm run scripts || npm run allure:posttest",
     "cy:runApi": "cypress run --reporter mochawesome"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Jans888/cypress-e2e.git"
-  },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Jans888/cypress-e2e/issues"
-  },
-  "homepage": "https://github.com/Jans888/cypress-e2e#readme",
   "devDependencies": {
     "@shelex/cypress-allure-plugin": "^2.14.0",
     "cypress": "^8.4.1",
