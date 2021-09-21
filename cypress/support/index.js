@@ -14,7 +14,13 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
+/// <reference types="@shelex/cypress-allure-plugin" />
+import "cypress-real-events/support";
 import './commands'
+import '@shelex/cypress-allure-plugin'
+cy.faker = require('faker')
+const dayjs = require('dayjs')
 
+Cypress.dayjs = dayjs
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
