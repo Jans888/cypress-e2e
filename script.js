@@ -9,8 +9,8 @@ console.log(section.length);
 if (section.length > 1) {
     for (var i = 1; i < section.length; i++) {
         let errorTemp = section[1].substring( 0, section[1].indexOf( "ts:" ) ).replace("      at Context.eval (https://example.cypress.io/__cypress/tests?p=", "-> ")
-        let addText = "\nAssertionError:"
-        let error = addText.concat(errorTemp).concat("ts\n")
+        let addText = "<br>AssertionError:"
+        let error = addText.concat(errorTemp).concat("ts")
         details.push(error)
     }
 } else {
