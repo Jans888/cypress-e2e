@@ -4,10 +4,10 @@ describe('example to-do app', () => {
 
   beforeEach(() => {
     const allure = Cypress.Allure.reporter.getInterface()
-    allure.label('tag', 'test')
+    allure.label('tag', '3 test')
     allure.label('tag', 'regression')
     allure.label('owner', 'JS')
-    allure.story('testRegression')
+    allure.story('3 testRegression')
   })
 
   beforeEach(() => {
@@ -18,10 +18,10 @@ describe('example to-do app', () => {
     cy.visit('https://example.cypress.io/todo')
   })
 
-  it('displays two todo items by default', () => {
+  it('3 displays two todo items by default', () => {
     cy.allure()
-      .logStep('displays two todo items by default')
-      .description('displays two todo items by default')
+      .logStep('3 displays two todo items by default')
+      .description('3 displays two todo items by default')
     // We use the `cy.get()` command to get all elements that match the selector.
     // Then, we use `should` to assert that there are two matched items,
     // which are the two default items.
@@ -35,10 +35,10 @@ describe('example to-do app', () => {
     cy.get('.todo-list li').last().should('have.text', 'Walk the dog')
   })
 
-  it('can add new todo items', () => {
+  it('3 can add new todo items', () => {
     cy.allure()
-      .logStep('can add new todo items')
-      .description('can add new todo items')
+      .logStep('3 can add new todo items')
+      .description('3 can add new todo items')
     // We'll store our item text in a variable so we can reuse it
     const newItem = 'Feed the cat'
 
@@ -61,10 +61,10 @@ describe('example to-do app', () => {
       .should('have.text', newItem)
   })
 
-  it('can check off an item as completed', () => {
+  it('3 can check off an item as completed', () => {
     cy.allure()
-      .logStep('can check off an item as completed')
-      .description('can check off an item as completed')
+      .logStep('3 can check off an item as completed')
+      .description('3 can check off an item as completed')
     // In addition to using the `get` command to get an element by selector,
     // we can also use the `contains` command to get an element by its contents.
     // However, this will yield the <label>, which is lowest-level element that contains the text.
@@ -86,7 +86,7 @@ describe('example to-do app', () => {
       .should('have.class', 'completed')
   })
 
-  context('with a checked task', () => {
+  context('3 with a checked task', () => {
     beforeEach(() => {
       // We'll take the command we used above to check off an element
       // Since we want to perform multiple tests that start with checking
@@ -98,10 +98,10 @@ describe('example to-do app', () => {
         .check()
     })
 
-    it('can filter for uncompleted tasks', () => {
+    it('3 can filter for uncompleted tasks', () => {
       cy.allure()
-      .logStep('can filter for uncompleted tasks')
-      .description('can filter for uncompleted tasks')
+      .logStep('3 can filter for uncompleted tasks')
+      .description('3 can filter for uncompleted tasks')
       // We'll click on the "active" button in order to
       // display only incomplete items
       cy.contains('Active').click()
@@ -118,10 +118,10 @@ describe('example to-do app', () => {
       cy.contains('Pay electric bill').should('exist')
     })
 
-    it('can filter for completed tasks', () => {
+    it('3 can filter for completed tasks', () => {
       cy.allure()
-      .logStep('can filter for completed tasks')
-      .description('can filter for completed tasks')
+      .logStep('3 can filter for completed tasks')
+      .description('3 can filter for completed tasks')
       // We can perform similar steps as the test above to ensure
       // that only completed tasks are shown
       cy.contains('Completed').click()
@@ -134,10 +134,10 @@ describe('example to-do app', () => {
       cy.contains('Walk the dog').should('not.exist')
     })
 
-    it('can delete all completed tasks', () => {
+    it('3 can delete all completed tasks', () => {
       cy.allure()
-      .logStep('can delete all completed tasks')
-      .description('can delete all completed tasks')
+      .logStep('3 can delete all completed tasks')
+      .description('3 can delete all completed tasks')
       // First, let's click the "Clear completed" button
       // `contains` is actually serving two purposes here.
       // First, it's ensuring that the button exists within the dom.
